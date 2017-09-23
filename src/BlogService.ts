@@ -12,18 +12,30 @@ export class BlogService {
 
   constructor(private http: Http) { }
 
-  create(User:Register): Promise<Register> {
+
+  /*
+@Register Method call For Register user from the registration page
+@For The User Registration call from the Registration Component and pass to the http.post method
+@parametes user object to pass to the server side
+@return as Object
+*/
+
+  Register(User:Register): Promise<Register> {
     //var a=JSON.stringify({User});
     debugger
     return this.http
       .post(this.BlogUrl + 'InsertRegistration',User, {headers: this.headers})
       .toPromise()
-      .then()
       .catch(this.handleError);
   }
+
+  /*
+@LogIn Method call For Login user from the Login Page
+@For The User LogIn call from the LogIn Component and pass to the http.post method fro LogIn User
+@parametes user object to pass to the server side and Get back the Result
+@return as Object
+*/
   LogIn(LogInUser:LogIn): Promise<LogIn> {
-    //var a=JSON.stringify({User});
-    debugger
     return this.http
       .post(this.BlogUrl + 'login',LogInUser, {headers: this.headers})
       .toPromise()

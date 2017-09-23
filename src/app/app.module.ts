@@ -1,12 +1,13 @@
 import { BlogService } from '../BlogService';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { HttpModule }    from '@angular/http';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LogInComponent } from './LogIn/LogIn.component';
 import { FormsModule }   from '@angular/forms';
-import { RouterModule }   from '@angular/router';
+import { RouterModule }   from '@angular/router'
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -15,6 +16,7 @@ import { RouterModule }   from '@angular/router';
     AppComponent,
     RegistrationComponent,
     LogInComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,9 @@ import { RouterModule }   from '@angular/router';
       }, {
         path: 'LogIn',
         component: LogInComponent
+      },{
+        path: 'Home',
+        component: HomeComponent
       }
     ])
   ],

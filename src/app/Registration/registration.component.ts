@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Register } from './Register';
 import { BlogService } from '../../BlogService';
-
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -10,7 +10,7 @@ import { BlogService } from '../../BlogService';
 })
 export class RegistrationComponent implements OnInit {
   
-  constructor(private blogService:BlogService) {  }
+  constructor(private blogService:BlogService,private _location:Location) {  }
   ngOnInit() {
   }
   //user:{FirstName:string,LastName:string,UserName:string,Email:string,Password:string,ConfirmPassword:string};
@@ -20,15 +20,26 @@ export class RegistrationComponent implements OnInit {
   Email:'',
   UserName:'',
   Password:'',
-  ContactNo:'',
-  Address:''
+  ContactNo:0,
+  Address:'',
+  ConfirmPassword:''
 }
-  add(user):void{
-    
-     this.blogService.create(user).then(abc => {
-    
-    });
-  }
 
+/*
+@Register Method call For Register user
+@For The User Registration call from the Registration html
+@parametes user object to pass to the server side
+@return as Object
+*/
+  Register(user:Register):void{
+    debugger
+     this.blogService.Register(user).then(response=>{
+       return Promise.resolve(true);
+// this.goback()
+     })
+  }
+goback(){
+  this._location.back();
+}
   
 }
