@@ -1,0 +1,33 @@
+<p>
+  registration works!
+</p>
+<div>
+  <label> Name :</label>
+  <input [(ngModel)]="user.Name" placeholder="Name"/>
+</div>
+<div>
+  <label>User Name: </label>
+  <input [(ngModel)]="user.UserName" placeholder="User Name"/>
+</div>
+<div>
+  <label>Email: </label>
+  <input [(ngModel)]="user.Email" placeholder="Email"/>
+</div> 
+<div>
+  <label>password: </label>
+  <input [(ngModel)]="user.Password" placeholder="password" type="password"/>
+</div>
+<div>
+  <label>Confirm password: </label>
+  <input [(ngModel)]="user.ConfirmPassword" placeholder="Confirm password"  type="password"/>
+</div>
+ <div>
+  <label>ContactNo: </label>
+  <input [(ngModel)]="user.ContactNo" placeholder="ContactNo"/>
+</div>
+<div>
+  <label>Address: </label>
+  <input [(ngModel)]="user.Address" placeholder="Address"/>
+</div>
+
+<button (click)="add(user)">Save</button>  

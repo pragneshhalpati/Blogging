@@ -1,0 +1,13 @@
+<p>
+  LogIn works!
+</p>
+
+<div>
+  <label>UserName: </label>
+  <input [(ngModel)]="LogInUser.UserName" placeholder="UserName" type="password"/>
+</div>
+<div>
+  <label>password: </label>
+  <input [(ngModel)]="LogInUser.Password" placeholder="password"  type="password"/>
+</div>
+<button (click)="LogIn(LogInUser)">Save</button>
