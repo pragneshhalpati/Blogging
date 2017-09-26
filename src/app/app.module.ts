@@ -24,6 +24,11 @@ import { HomeComponent } from './home/home.component';
     HttpModule,
     RouterModule.forRoot([
       {
+        path: '',
+        redirectTo:'/LogIn',
+        pathMatch:'full'
+      }, 
+      {
         path: 'Registration',
         component: RegistrationComponent
       }, {

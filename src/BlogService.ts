@@ -39,6 +39,9 @@ export class BlogService {
     return this.http
       .post(this.BlogUrl + 'login',LogInUser, {headers: this.headers})
       .toPromise()
+      .then((Response)=>{
+        return Response.json();
+      })
       .catch(this.handleError);
 
 

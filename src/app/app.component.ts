@@ -13,13 +13,4 @@ export class AppComponent {
   
   title = 'Blogging';
 
-
-  /*
-@LogIn
-@For The User LogIn
-@parametes object as UserName And Password
-@return as Object
-*/
-
-
 }

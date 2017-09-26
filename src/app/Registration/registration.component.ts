@@ -34,7 +34,9 @@ export class RegistrationComponent implements OnInit {
   Register(user:Register):void{
     debugger
      this.blogService.Register(user).then(response=>{
+      this.goback()
        return Promise.resolve(true);
+      
 // this.goback()
      })
   }
